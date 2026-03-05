@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Central Coast Float | Natural Wellness — Float Therapy, Cedar Bathhouse & Massage</title>
-  <meta name="description" content="Feel human again. Central Coast Float offers float therapy, Finnish cedar bathhouse, and therapeutic massage in Umina Beach. 4.9 stars from 363+ Google reviews. Book your session from $59.">
+  <title>Central Coast Float | Float Therapy, Cedar Bathhouse & Massage — Umina Beach</title>
+  <meta name="description" content="Go from wired and exhausted to deeply calm. Float therapy, cedar bathhouse and massage in Umina Beach. 300+ five-star reviews. Sessions from $59.">
   <meta name="keywords" content="central coast float, float therapy central coast, bathhouse central coast, massage umina beach, wellness central coast, sensory deprivation, finnish sauna, cold plunge">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://centralcoastfloat.com.au/">
-  <meta property="og:title" content="Central Coast Float | Natural Wellness — Float Therapy, Cedar Bathhouse & Massage">
-  <meta property="og:description" content="Float therapy, Finnish cedar bathhouse, and therapeutic massage in Umina Beach. 4.9 stars from 363+ reviews. Book from $59.">
+  <meta property="og:title" content="Central Coast Float | Float Therapy, Cedar Bathhouse & Massage — Umina Beach">
+  <meta property="og:description" content="Go from wired and exhausted to deeply calm. Float therapy, cedar bathhouse and massage in Umina Beach. Sessions from $59.">
   <meta property="og:image" content="https://centralcoastfloat.com.au/wp-content/uploads/2025/03/Slider_Rev_Image_292KB_499kb-scaled.webp">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -23,7 +23,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Central Coast Float",
-    "description": "Natural wellness centre offering float therapy, Finnish cedar bathhouse, and therapeutic massage in Umina Beach, Central Coast.",
+    "description": "Natural wellness centre offering float therapy, Finnish cedar bathhouse, and massage in Umina Beach, Central Coast.",
     "url": "https://centralcoastfloat.com.au",
     "telephone": "+61416017313",
     "email": "hello@centralcoastfloat.com",
@@ -82,7 +82,7 @@
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: var(--body); color: var(--text); line-height: 1.65; background: var(--bg); -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--body); color: var(--text); line-height: 1.65; background: var(--bg); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
 
@@ -174,7 +174,7 @@
     }
     .hero::before {
       content: ''; position: absolute; inset: 0;
-      background: rgba(0,0,0,0.35);
+      background: rgba(0,0,0,0.4);
     }
     .hero > * { position: relative; z-index: 1; }
     .hero-eyebrow {
@@ -186,11 +186,21 @@
       line-height: 1.2; max-width: 720px; margin-bottom: 20px;
     }
     .hero .subtitle {
-      font-size: 16px; font-weight: 300; opacity: 0.8; max-width: 520px;
+      font-size: 16px; font-weight: 300; opacity: 0.85; max-width: 540px;
       line-height: 1.75; margin-bottom: 40px;
     }
+    .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .hero-cta-group .btn-hero {
+      display: inline-block; background: var(--eucalyptus); color: var(--cloud) !important;
+      padding: 16px 36px; border-radius: 6px; font-size: 15px; font-weight: 500;
+      letter-spacing: 0.3px; transition: all 0.3s; border: none; cursor: pointer;
+    }
+    .hero-cta-group .btn-hero:hover { background: #344d42; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(61,90,78,0.3); }
+    .hero-cta-small {
+      font-size: 12px; opacity: 0.6; font-weight: 300; max-width: 320px; line-height: 1.5;
+    }
     .hero .micro-proof {
-      margin-top: 28px; font-size: 13px; opacity: 0.55; letter-spacing: 0.3px;
+      margin-top: 28px; font-size: 13px; opacity: 0.7; letter-spacing: 0.3px;
     }
     .hero .micro-proof .stars-inline { color: #f4b400; }
 
@@ -213,6 +223,36 @@
       margin: 0 auto; line-height: 1.75; font-weight: 300;
     }
     .cta-wrap { text-align: center; margin-top: 44px; }
+
+    /* ===== INTRO OFFER ===== */
+    .intro-offer {
+      padding: 80px 24px; text-align: center; background: var(--cloud);
+      border-bottom: 1px solid var(--timber-wash);
+    }
+    .intro-offer .offer-badge {
+      display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--eucalyptus);
+      background: rgba(61,90,78,0.08); padding: 6px 18px; border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .intro-offer h2 {
+      font-family: var(--heading); font-size: 32px; font-weight: 400; font-style: italic;
+      line-height: 1.3; max-width: 560px; margin: 0 auto 12px; color: var(--dark-timber);
+    }
+    .intro-offer .offer-sub {
+      font-size: 15px; color: var(--text-light); max-width: 480px;
+      margin: 0 auto 32px; line-height: 1.75; font-weight: 300;
+    }
+    .intro-offer .offer-price {
+      font-family: var(--heading); font-size: 42px; font-weight: 600;
+      color: var(--eucalyptus); margin-bottom: 6px;
+    }
+    .intro-offer .offer-price-detail {
+      font-size: 14px; color: var(--text-light); font-weight: 300; margin-bottom: 28px;
+    }
+    .intro-offer .offer-fine {
+      font-size: 12px; color: var(--text-faint); margin-top: 14px; font-weight: 300;
+    }
 
     /* ===== SERVICES (Native State style) ===== */
     .services-section { padding: 100px 0 80px; }
@@ -317,6 +357,43 @@
     }
     .services-dot:hover { background: var(--cedar); }
 
+    /* ===== CALM CLUB ===== */
+    .calm-club {
+      padding: 80px 24px; text-align: center;
+      background: var(--eucalyptus); color: var(--cloud);
+    }
+    .calm-club .club-eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
+      opacity: 0.5; margin-bottom: 14px;
+    }
+    .calm-club h2 {
+      font-family: var(--heading); font-size: 32px; font-weight: 400; font-style: italic;
+      line-height: 1.35; max-width: 620px; margin: 0 auto 12px;
+    }
+    .calm-club .club-sub {
+      font-size: 15px; opacity: 0.8; max-width: 480px; margin: 0 auto 36px;
+      line-height: 1.75; font-weight: 300;
+    }
+    .calm-club-features {
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+      margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;
+    }
+    .club-feature {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 400; opacity: 0.9;
+    }
+    .club-feature .check {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center;
+      font-size: 12px; flex-shrink: 0;
+    }
+    .calm-club .btn-club {
+      display: inline-block; background: var(--cloud); color: var(--eucalyptus) !important;
+      padding: 14px 34px; border-radius: 6px; font-size: 14px; font-weight: 500;
+      letter-spacing: 0.3px; transition: all 0.3s;
+    }
+    .calm-club .btn-club:hover { background: var(--linen); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+
     /* ===== SOCIAL PROOF ===== */
     .social-proof { padding: 80px 24px; text-align: center; }
     .google-badge {
@@ -324,12 +401,12 @@
       background: var(--cloud); padding: 18px 32px; border-radius: 12px;
       box-shadow: 0 2px 20px rgba(43,36,32,0.05); margin-bottom: 20px;
     }
-    .google-badge .g-icon { font-size: 32px; font-weight: 700; color: #4285f4; }
+    .google-badge .g-icon { font-size: 28px; font-weight: 700; }
+    .google-badge .g-icon span { background: linear-gradient(135deg, #4285f4 25%, #ea4335 25%, #ea4335 50%, #fbbc05 50%, #fbbc05 75%, #34a853 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .stars { color: #f4b400; font-size: 20px; letter-spacing: 2px; }
     .rating-text { font-size: 26px; font-weight: 600; color: var(--dark-timber); font-family: var(--heading); }
     .rating-sub { font-size: 13px; color: var(--text-light); }
-    .proof-note { font-size: 14px; color: var(--text-light); margin-bottom: 8px; font-weight: 300; }
-    .proof-link { font-size: 13px; color: var(--eucalyptus); font-weight: 500; }
+    .proof-link { font-size: 13px; color: var(--eucalyptus); font-weight: 500; margin-top: 8px; display: inline-block; }
     .proof-link:hover { text-decoration: underline; }
 
     .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 940px; margin: 40px auto 0; }
@@ -465,13 +542,21 @@
       .section { padding: 64px 20px; }
       .section-heading { font-size: 26px; }
 
+      .intro-offer { padding: 56px 20px; }
+      .intro-offer h2 { font-size: 26px; }
+      .intro-offer .offer-price { font-size: 36px; }
+
       .services-grid { padding: 0 16px; gap: 12px; scroll-snap-type: x mandatory; scroll-padding: 0 16px; }
       .service-card { flex: 0 0 calc(100vw - 32px); height: 60vh; min-height: 420px; scroll-snap-align: center; scroll-snap-stop: always; }
-      .service-card .card-title h3 { font-size: 30px; }
+
       .testimonials { grid-template-columns: 1fr; max-width: 400px; }
       .why-grid { grid-template-columns: 1fr; max-width: 400px; }
       .story-grid { grid-template-columns: 1fr; gap: 32px; }
       .steps-row { grid-template-columns: 1fr; gap: 32px; max-width: 340px; }
+
+      .calm-club { padding: 56px 20px; }
+      .calm-club h2 { font-size: 26px; }
+      .calm-club-features { gap: 20px; flex-direction: column; align-items: center; }
 
       .final-cta { padding: 80px 20px; }
       .final-cta h2 { font-size: 28px; }
@@ -518,10 +603,6 @@
             Infrared Sauna &amp; Cold Plunge
             <span class="menu-sub">Private contrast therapy experience</span>
           </a>
-          <a href="#">
-            Guided Breathwork &amp; Bathhouse Ritual
-            <span class="menu-sub">Breathwork-led bathhouse ceremony</span>
-          </a>
         </div>
       </div>
       <a href="#">Prices</a>
@@ -533,15 +614,29 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <p class="hero-eyebrow">Natural Wellness &mdash; Umina Beach, Central Coast</p>
-    <h1>Your Body Already Knows How to Heal. It Just Needs the Right Space.</h1>
-    <p class="subtitle">Float in silence. Sweat in cedar heat. Plunge into cold water. Let your hands be worked by someone who knows where you hold your tension. This is that space.</p>
-    <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-outline-light" data-track="hero-cta">Book a Session</a>
-    <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 from 363 Google reviews &middot; From $59</p>
+    <p class="hero-eyebrow">Umina Beach, Central Coast</p>
+    <h1>Go from wired and exhausted to deeply calm.</h1>
+    <p class="subtitle">Float therapy, cedar bathhouse and massage in Umina Beach. Sessions from $59.</p>
+    <div class="hero-cta-group">
+      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-hero" data-track="hero-cta">Start with the Intro 3&#8209;Pack &mdash; 3 visits for $118</a>
+      <p class="hero-cta-small">Best value for your first month. Use within 2 months.</p>
+    </div>
+    <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 &middot; 300+ five-star reviews on Google</p>
+  </section>
+
+  <!-- ===== INTRO 3-PACK OFFER ===== -->
+  <section class="intro-offer" id="intro-pack">
+    <span class="offer-badge">Best for first-timers</span>
+    <h2>Not sure where to start? Try the Intro 3&#8209;Pack.</h2>
+    <p class="offer-sub">Three bathhouse sessions to get you hooked. Most people know by the second visit that this is their new reset.</p>
+    <div class="offer-price">$118</div>
+    <p class="offer-price-detail">3 bathhouse visits &middot; Save $29 vs casual</p>
+    <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-primary" data-track="intro-pack-cta">Book Now</a>
+    <p class="offer-fine">Use within 2 months of purchase. Valid for bathhouse sessions only.</p>
   </section>
 
   <!-- ===== SERVICES ===== -->
-  <section class="services-section section-cloud">
+  <section class="services-section section-linen">
     <span class="section-eyebrow">What We Offer</span>
     <h2 class="section-heading">Every Way to Reset. One Place That Gets It.</h2>
     <p class="section-sub">Heat, cold, stillness, touch. Every modality we offer is rooted in one principle &mdash; helping your body find its way back to calm.</p>
@@ -555,7 +650,7 @@
           <h3>The Bathhouse</h3>
           <p class="card-desc">Finnish sauna, cold plunge pools &amp; hot mineral spas set among bamboo and golden cane palms.</p>
           <div class="card-actions">
-            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-bathhouse">Book</a>
+            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-bathhouse">Book Now</a>
             <a href="finnish-sauna-bathhouse-v2.html" class="card-btn-explore" data-track="card-explore-bathhouse">Explore</a>
           </div>
         </div>
@@ -568,7 +663,7 @@
           <h3>Float Therapy</h3>
           <p class="card-desc">1,000kg of Epsom salt. Zero gravity. Zero light. Zero sound. Total sensory deprivation.</p>
           <div class="card-actions">
-            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-float">Book</a>
+            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-float">Book Now</a>
             <a href="#" class="card-btn-explore" data-track="card-explore-float">Explore</a>
           </div>
         </div>
@@ -581,7 +676,7 @@
           <h3>Massage</h3>
           <p class="card-desc">Remedial and relaxation massage from therapists who actually listen to your body.</p>
           <div class="card-actions">
-            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-massage">Book</a>
+            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-massage">Book Now</a>
             <a href="#" class="card-btn-explore" data-track="card-explore-massage">Explore</a>
           </div>
         </div>
@@ -594,7 +689,7 @@
           <h3>Infrared Sauna</h3>
           <p class="card-desc">Deep, penetrating infrared heat in your own private room &mdash; gentle yet effective.</p>
           <div class="card-actions">
-            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-infrared">Book</a>
+            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-infrared">Book Now</a>
             <a href="#" class="card-btn-explore" data-track="card-explore-infrared">Explore</a>
           </div>
         </div>
@@ -607,7 +702,7 @@
           <h3>Infrared Sauna &amp; Cold Plunge</h3>
           <p class="card-desc">Private infrared heat followed by cold plunge. The ultimate contrast therapy reset.</p>
           <div class="card-actions">
-            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-plunge">Book</a>
+            <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-plunge">Book Now</a>
             <a href="#" class="card-btn-explore" data-track="card-explore-plunge">Explore</a>
           </div>
         </div>
@@ -623,43 +718,61 @@
         <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
       </button>
     </div>
+  </section>
 
-    <div class="cta-wrap" style="padding: 0 24px;">
-      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-primary" data-track="services-cta">Book a Session</a>
+  <!-- ===== CALM CLUB MEMBERSHIP ===== -->
+  <section class="calm-club">
+    <p class="club-eyebrow">Membership</p>
+    <h2>Come more than once a month? Calm Club beats paying casual every time.</h2>
+    <p class="club-sub">4 bathhouse visits every 4 weeks for $179 + member&#8209;only perks.</p>
+    <div class="calm-club-features">
+      <div class="club-feature">
+        <span class="check">&#10003;</span>
+        4 bathhouse visits every 4 weeks
+      </div>
+      <div class="club-feature">
+        <span class="check">&#10003;</span>
+        Member pricing on floats, infrared &amp; cold plunge
+      </div>
+      <div class="club-feature">
+        <span class="check">&#10003;</span>
+        Loyalty bonuses after 3 and 6 months
+      </div>
     </div>
+    <a href="#" class="btn-club" data-track="calm-club-cta">See Calm Club Memberships</a>
   </section>
 
   <!-- ===== SOCIAL PROOF ===== -->
   <section class="social-proof section-linen">
     <div class="google-badge">
-      <div class="g-icon">G</div>
+      <div class="g-icon"><span>G</span></div>
       <div>
         <div style="display:flex;align-items:center;gap:10px;">
           <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           <span class="rating-text">4.9</span>
         </div>
-        <div class="rating-sub">363 reviews on Google</div>
+        <div class="rating-sub">300+ reviews on Google</div>
       </div>
     </div>
-    <p class="proof-note">Real people. Real relief. Real transformation.</p>
+    <br>
     <a href="https://www.google.com/maps/place/Central+Coast+Float/" target="_blank" rel="noopener" class="proof-link">Read our Google Reviews &rarr;</a>
 
     <div class="testimonials">
       <div class="testimonial-card">
         <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"So glad we found this beautiful oasis right in the middle of Umina. We went for a birthday treat &mdash; The Bathhouse for both of us and then a relaxing massage. Who knew what delights lay behind the unassuming front door!"</p>
+        <p>"So glad we found this beautiful oasis right in the middle of Umina. We went for a birthday treat &mdash; bathhouse for both of us and then a massage. Who knew what delights lay behind that front door!"</p>
         <div class="t-name">Kate T.</div>
         <div class="t-source">Google Review</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"I visited straight after completing a Spartan marathon and it was exactly what my body needed to recover and unwind. The atmosphere is beautiful, calming, and thoughtfully designed."</p>
+        <p>"Visited straight after completing a Spartan marathon and it was exactly what my body needed to recover. The atmosphere is beautiful, calming, and thoughtfully designed."</p>
         <div class="t-name">tjrivera88</div>
         <div class="t-source">Google Review</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"From the moment I stepped in the front door I felt welcomed. The surroundings are relaxing and the staff are wonderful. I visited for the first time and had the Rejuvenation Detox Experience."</p>
+        <p>"From the moment I stepped in the front door I felt welcomed. The surroundings are relaxing and the staff are wonderful. Had the Rejuvenation Detox Experience and left feeling amazing."</p>
         <div class="t-name">Mary-ann M.</div>
         <div class="t-source">Google Review</div>
       </div>
@@ -680,7 +793,7 @@
       </div>
       <div class="why-item">
         <div class="why-icon">&#9733;</div>
-        <h4>363+ Five-Star Reviews</h4>
+        <h4>300+ Five-Star Reviews</h4>
         <p>Our reputation is built on outcomes. People come back because it works &mdash; and they tell their friends because the experience speaks for itself.</p>
       </div>
       <div class="why-item">
@@ -704,7 +817,7 @@
         <span class="section-eyebrow" style="text-align:left;">Our Story</span>
         <h3>From a Back Cabin to a Place People Call Home</h3>
         <p>Central Coast Float started with a first date &mdash; James took Amanda to a float, and she walked out knowing the Central Coast needed one. What began as a small setup run out of a back cabin at home nine years ago has grown into a full-spectrum natural wellness destination in Umina Beach.</p>
-        <p>We exist for the professional who can&rsquo;t switch off, the tradie whose back never stops aching, the mum who puts everyone else first, and the teacher who&rsquo;s forgotten what rest feels like. We&rsquo;re not about quick fixes or wellness trends &mdash; we&rsquo;re about creating a space where your nervous system can finally exhale.</p>
+        <p>We exist for the professional who can&rsquo;t switch off, the tradie whose back never stops aching, the mum who puts everyone else first, and the teacher who&rsquo;s forgotten what rest feels like.</p>
         <p class="story-tagline">Feel human again.</p>
       </div>
     </div>
@@ -735,15 +848,15 @@
     </div>
 
     <div class="cta-wrap">
-      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-primary" data-track="how-it-works-cta">Book Your First Session</a>
+      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-primary" data-track="how-it-works-cta">Book Now</a>
     </div>
   </section>
 
   <!-- ===== FINAL CTA ===== -->
   <section class="final-cta">
-    <h2>This Is Where Your Body Finds Its Reset</h2>
-    <p>You don&rsquo;t need to earn rest. You don&rsquo;t need to wait until you&rsquo;re broken. Book a session, show up, and let your body do what it already knows how to do.</p>
-    <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-outline-light" data-track="final-cta">Book a Session</a>
+    <h2>You Don&rsquo;t Need to Earn Rest</h2>
+    <p>Book a session, show up, and let your body do what it already knows how to do. Your nervous system will thank you.</p>
+    <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-outline-light" data-track="final-cta">Book Now</a>
     <p class="urgency-note">Weekends book out fast &middot; Bookings by appointment only</p>
     <p class="micro">From $59 per session &middot; Open Wed&ndash;Sun &middot; Umina Beach</p>
   </section>
@@ -826,12 +939,9 @@
       var totalPages = 1;
 
       function isMobile() { return window.innerWidth <= 768; }
-
       function getCardsPerPage() { return isMobile() ? 1 : 3; }
-
       function calcTotalPages() {
         var cpp = getCardsPerPage();
-        // e.g. 5 cards, 3 per page = 2 pages; 5 cards, 1 per page = 5 pages
         return Math.ceil(totalCards / cpp);
       }
 
@@ -854,7 +964,6 @@
       function getScrollTarget(page) {
         var cpp = getCardsPerPage();
         var cardIndex = page * cpp;
-        // Clamp so the last page scrolls to show the final cards
         if (cardIndex >= totalCards - cpp) {
           return grid.scrollWidth - grid.clientWidth;
         }
@@ -882,7 +991,6 @@
       prevBtn.addEventListener('click', function() { scrollToPage(currentPage - 1); });
       nextBtn.addEventListener('click', function() { scrollToPage(currentPage + 1); });
 
-      // Sync dots when user manually scrolls (trackpad/touch/snap)
       var scrollTimeout;
       grid.addEventListener('scroll', function() {
         clearTimeout(scrollTimeout);
@@ -898,7 +1006,6 @@
         }, 80);
       });
 
-      // Rebuild dots on resize (desktop ↔ mobile)
       var resizeTimeout;
       window.addEventListener('resize', function() {
         clearTimeout(resizeTimeout);
@@ -908,7 +1015,6 @@
         }, 200);
       });
 
-      // Init
       buildDots();
       updateControls();
     })();
