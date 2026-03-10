@@ -240,23 +240,23 @@
 
     /* ===== FIRST-TIMER OFFERS ===== */
     .first-timer {
-      padding: 80px 24px; background: var(--linen);
+      padding: 56px 24px; background: var(--linen);
       border-bottom: 1px solid var(--timber-wash);
     }
     .first-timer .section-eyebrow,
     .first-timer .section-heading,
     .first-timer .section-sub { text-align: center; }
-    .first-timer .section-heading { margin-bottom: 8px; }
+    .first-timer .section-heading { margin-bottom: 6px; }
     .first-timer .section-sub {
-      max-width: 560px; margin: 0 auto 48px;
+      max-width: 560px; margin: 0 auto 32px;
     }
     .intro-cards {
       display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 20px; max-width: 1000px; margin: 0 auto;
+      gap: 16px; max-width: 960px; margin: 0 auto;
     }
     .intro-card {
-      background: var(--cloud); border-radius: 16px;
-      padding: 32px 24px; text-align: center;
+      background: var(--cloud); border-radius: 14px;
+      padding: 24px 18px 22px; text-align: center;
       border: 1px solid var(--timber-wash);
       display: flex; flex-direction: column; align-items: center;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -266,30 +266,30 @@
       transform: translateY(-3px);
     }
     .intro-card-icon {
-      width: 48px; height: 48px; border-radius: 50%;
+      width: 40px; height: 40px; border-radius: 50%;
       background: rgba(61,90,78,0.08); display: flex;
       align-items: center; justify-content: center;
-      margin-bottom: 16px; color: var(--eucalyptus); font-size: 20px;
+      margin-bottom: 10px; color: var(--eucalyptus); font-size: 18px;
     }
     .intro-card h3 {
-      font-family: var(--heading); font-size: 18px; font-weight: 500;
-      color: var(--dark-timber); margin-bottom: 8px;
+      font-family: var(--heading); font-size: 16px; font-weight: 500;
+      color: var(--dark-timber); margin-bottom: 6px;
     }
     .intro-card .intro-card-desc {
-      font-size: 13px; color: var(--text-light); font-weight: 300;
-      line-height: 1.6; margin-bottom: 20px; flex-grow: 1;
+      font-size: 12.5px; color: var(--text-light); font-weight: 300;
+      line-height: 1.55; margin-bottom: 14px; flex-grow: 1;
     }
     .intro-card .intro-card-price {
-      font-family: var(--heading); font-size: 28px; font-weight: 600;
-      color: var(--eucalyptus); margin-bottom: 4px;
+      font-family: var(--heading); font-size: 24px; font-weight: 600;
+      color: var(--eucalyptus); margin-bottom: 2px;
     }
     .intro-card .intro-card-value {
-      font-size: 12px; color: var(--text-faint); font-weight: 300;
-      margin-bottom: 20px;
+      font-size: 11px; color: var(--text-faint); font-weight: 300;
+      margin-bottom: 14px;
     }
     .intro-card .btn-intro {
-      display: inline-block; padding: 10px 28px; background: var(--eucalyptus);
-      color: #fff; border-radius: 8px; font-size: 13px; font-weight: 500;
+      display: inline-block; padding: 8px 24px; background: var(--eucalyptus);
+      color: #fff; border-radius: 8px; font-size: 12.5px; font-weight: 500;
       text-decoration: none; letter-spacing: 0.5px;
       transition: background 0.3s ease;
     }
@@ -597,10 +597,14 @@
       .section { padding: 64px 20px; }
       .section-heading { font-size: 26px; }
 
-      .first-timer { padding: 56px 20px; }
-      .intro-cards { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-      .intro-card { padding: 24px 16px; }
-      .intro-card .intro-card-price { font-size: 24px; }
+      .first-timer { padding: 40px 16px; }
+      .intro-cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .intro-card { padding: 18px 14px 16px; }
+      .intro-card h3 { font-size: 14px; }
+      .intro-card .intro-card-desc { font-size: 11.5px; margin-bottom: 10px; }
+      .intro-card .intro-card-price { font-size: 20px; }
+      .intro-card .intro-card-value { font-size: 10px; margin-bottom: 10px; }
+      .intro-card .btn-intro { padding: 7px 18px; font-size: 11.5px; }
 
       .positioning-block { padding: 56px 20px; }
       .positioning-block h2 { font-size: 28px; }
@@ -776,12 +780,17 @@
     </div>
   </section>
 
+  <!-- ===== POSITIONING BLOCK ===== -->
+  <section class="positioning-block">
+    <h2>Feel human again.</h2>
+    <p>A natural wellness destination in Umina Beach for stressed locals who need real relief. Bathhouse, float therapy, sauna and massage experiences designed to reset stress, relieve tension and help you feel more like yourself again.</p>
+  </section>
+
   <!-- ===== FIRST-TIMER OFFERS ===== -->
   <section class="first-timer" id="first-timer">
     <span class="section-eyebrow">New Here?</span>
     <h2 class="section-heading">Start here.</h2>
     <p class="section-sub">If it&#8217;s your first visit, choose the intro offer that best matches what your body and mind need most.</p>
-
     <div class="intro-cards">
       <div class="intro-card">
         <div class="intro-card-icon">&#9832;</div>
@@ -816,12 +825,6 @@
         <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-intro" data-track="intro-plunge">Book Intro</a>
       </div>
     </div>
-  </section>
-
-  <!-- ===== POSITIONING BLOCK ===== -->
-  <section class="positioning-block">
-    <h2>Feel human again.</h2>
-    <p>A natural wellness destination in Umina Beach for stressed locals who need real relief. Bathhouse, float therapy, sauna and massage experiences designed to reset stress, relieve tension and help you feel more like yourself again.</p>
   </section>
 
   <!-- ===== CALM CLUB MEMBERSHIP ===== -->
