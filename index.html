@@ -603,7 +603,8 @@
         flex: 0 0 82vw; height: 60vh; min-height: 420px;
         scroll-snap-align: center; scroll-snap-stop: always;
       }
-      .services-nav { display: none; }
+      .services-nav-btn { display: none; }
+      .services-nav { gap: 0; margin-top: 20px; }
       .services-scroll-hint { display: block; }
 
       .testimonials { grid-template-columns: 1fr; max-width: 400px; }
@@ -616,8 +617,6 @@
       .final-cta h2 { font-size: 28px; }
 
       .footer-nav { gap: 16px; }
-      .services-nav { gap: 20px; margin-top: 28px; }
-      .services-nav-btn { width: 42px; height: 42px; }
     }
   </style>
 </head>
@@ -1074,14 +1073,17 @@
       buildDots();
       updateControls();
 
-      /* Hide scroll hint after first scroll */
+      /* Hide scroll hint when near end */
       var hint = document.querySelector('.services-scroll-hint');
       if (hint) {
         grid.addEventListener('scroll', function() {
-          if (grid.scrollLeft > 30) {
+          var atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 50;
+          if (atEnd) {
             hint.style.opacity = '0';
             hint.style.transition = 'opacity 0.4s';
-            setTimeout(function() { hint.style.display = 'none'; }, 400);
+          } else {
+            hint.style.opacity = '';
+            hint.style.transition = '';
           }
         }, { passive: true });
       }
