@@ -238,6 +238,63 @@
     }
     .cta-wrap { text-align: center; margin-top: 44px; }
 
+    /* ===== FIRST-TIMER OFFERS ===== */
+    .first-timer {
+      padding: 80px 24px; background: var(--linen);
+      border-bottom: 1px solid var(--timber-wash);
+    }
+    .first-timer .section-eyebrow,
+    .first-timer .section-heading,
+    .first-timer .section-sub { text-align: center; }
+    .first-timer .section-heading { margin-bottom: 8px; }
+    .first-timer .section-sub {
+      max-width: 560px; margin: 0 auto 48px;
+    }
+    .intro-cards {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 20px; max-width: 1000px; margin: 0 auto;
+    }
+    .intro-card {
+      background: var(--cloud); border-radius: 16px;
+      padding: 32px 24px; text-align: center;
+      border: 1px solid var(--timber-wash);
+      display: flex; flex-direction: column; align-items: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .intro-card:hover {
+      box-shadow: 0 8px 32px rgba(61,90,78,0.10);
+      transform: translateY(-3px);
+    }
+    .intro-card-icon {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(61,90,78,0.08); display: flex;
+      align-items: center; justify-content: center;
+      margin-bottom: 16px; color: var(--eucalyptus); font-size: 20px;
+    }
+    .intro-card h3 {
+      font-family: var(--heading); font-size: 18px; font-weight: 500;
+      color: var(--dark-timber); margin-bottom: 8px;
+    }
+    .intro-card .intro-card-desc {
+      font-size: 13px; color: var(--text-light); font-weight: 300;
+      line-height: 1.6; margin-bottom: 20px; flex-grow: 1;
+    }
+    .intro-card .intro-card-price {
+      font-family: var(--heading); font-size: 28px; font-weight: 600;
+      color: var(--eucalyptus); margin-bottom: 4px;
+    }
+    .intro-card .intro-card-value {
+      font-size: 12px; color: var(--text-faint); font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .intro-card .btn-intro {
+      display: inline-block; padding: 10px 28px; background: var(--eucalyptus);
+      color: #fff; border-radius: 8px; font-size: 13px; font-weight: 500;
+      text-decoration: none; letter-spacing: 0.5px;
+      transition: background 0.3s ease;
+    }
+    .intro-card .btn-intro:hover { background: #2e4a3d; }
+
     /* ===== POSITIONING BLOCK ===== */
     .positioning-block {
       padding: 80px 24px; text-align: center; background: var(--cloud);
@@ -540,6 +597,11 @@
       .section { padding: 64px 20px; }
       .section-heading { font-size: 26px; }
 
+      .first-timer { padding: 56px 20px; }
+      .intro-cards { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .intro-card { padding: 24px 16px; }
+      .intro-card .intro-card-price { font-size: 24px; }
+
       .positioning-block { padding: 56px 20px; }
       .positioning-block h2 { font-size: 28px; }
       .positioning-block p { font-size: 15px; }
@@ -621,7 +683,7 @@
         <a href="#services" class="btn-hero-secondary" data-track="hero-view-experiences">View Experiences</a>
       </div>
       <div class="hero-micro-links">
-        <a href="#services" data-track="hero-first-timer">New here? Explore our experiences</a>
+        <a href="#first-timer" data-track="hero-first-timer">New here? See first&#8209;timer offers</a>
         <span class="divider">&middot;</span>
         <a href="https://centralcoastfloat.com.au/gift-vouchers/" data-track="hero-gift">Buying a gift? Get a gift card</a>
       </div>
@@ -711,6 +773,48 @@
       <button class="services-nav-btn" id="servicesNext" aria-label="Next services">
         <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
       </button>
+    </div>
+  </section>
+
+  <!-- ===== FIRST-TIMER OFFERS ===== -->
+  <section class="first-timer" id="first-timer">
+    <span class="section-eyebrow">New Here?</span>
+    <h2 class="section-heading">Start here.</h2>
+    <p class="section-sub">If it&#8217;s your first visit, choose the intro offer that best matches what your body and mind need most.</p>
+
+    <div class="intro-cards">
+      <div class="intro-card">
+        <div class="intro-card-icon">&#9832;</div>
+        <h3>Bathhouse Intro</h3>
+        <p class="intro-card-desc">Finnish sauna, hot &amp; cold cedar spas among tropical palms. The full bathhouse ritual.</p>
+        <div class="intro-card-price">$118</div>
+        <p class="intro-card-value">3 sessions &middot; Buy 2 get 1 free</p>
+        <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-intro" data-track="intro-bathhouse">Book Intro</a>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-icon">&#9676;</div>
+        <h3>Float Intro</h3>
+        <p class="intro-card-desc">600kg of Epsom salt. Zero gravity, zero light, zero sound. Total sensory reset.</p>
+        <div class="intro-card-price">$118</div>
+        <p class="intro-card-value">3 sessions &middot; Buy 2 get 1 free</p>
+        <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-intro" data-track="intro-float">Book Intro</a>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-icon">&#9728;</div>
+        <h3>Infrared Sauna Intro</h3>
+        <p class="intro-card-desc">Deep, penetrating infrared heat in your own private room. Gentle yet effective.</p>
+        <div class="intro-card-price">$118</div>
+        <p class="intro-card-value">3 sessions &middot; Buy 2 get 1 free</p>
+        <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-intro" data-track="intro-infrared">Book Intro</a>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-icon">&#9883;</div>
+        <h3>Infrared &amp; Cold Plunge Intro</h3>
+        <p class="intro-card-desc">Private infrared heat followed by cold plunge. The ultimate contrast therapy reset.</p>
+        <div class="intro-card-price">$118</div>
+        <p class="intro-card-value">3 sessions &middot; Buy 2 get 1 free</p>
+        <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-intro" data-track="intro-plunge">Book Intro</a>
+      </div>
     </div>
   </section>
 
