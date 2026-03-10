@@ -238,34 +238,18 @@
     }
     .cta-wrap { text-align: center; margin-top: 44px; }
 
-    /* ===== INTRO OFFER ===== */
-    .intro-offer {
+    /* ===== POSITIONING BLOCK ===== */
+    .positioning-block {
       padding: 80px 24px; text-align: center; background: var(--cloud);
       border-bottom: 1px solid var(--timber-wash);
     }
-    .intro-offer .offer-badge {
-      display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--eucalyptus);
-      background: rgba(61,90,78,0.08); padding: 6px 18px; border-radius: 20px;
-      margin-bottom: 20px;
+    .positioning-block h2 {
+      font-family: var(--heading); font-size: 36px; font-weight: 400; font-style: italic;
+      line-height: 1.3; color: var(--eucalyptus); margin: 0 auto 16px;
     }
-    .intro-offer h2 {
-      font-family: var(--heading); font-size: 32px; font-weight: 400; font-style: italic;
-      line-height: 1.3; max-width: 560px; margin: 0 auto 12px; color: var(--dark-timber);
-    }
-    .intro-offer .offer-sub {
-      font-size: 15px; color: var(--text-light); max-width: 480px;
-      margin: 0 auto 32px; line-height: 1.75; font-weight: 300;
-    }
-    .intro-offer .offer-price {
-      font-family: var(--heading); font-size: 42px; font-weight: 600;
-      color: var(--eucalyptus); margin-bottom: 6px;
-    }
-    .intro-offer .offer-price-detail {
-      font-size: 14px; color: var(--text-light); font-weight: 300; margin-bottom: 28px;
-    }
-    .intro-offer .offer-fine {
-      font-size: 12px; color: var(--text-faint); margin-top: 14px; font-weight: 300;
+    .positioning-block p {
+      font-size: 16px; color: var(--text-light); max-width: 600px;
+      margin: 0 auto; line-height: 1.8; font-weight: 300;
     }
 
     /* ===== SERVICES (Native State style) ===== */
@@ -556,9 +540,9 @@
       .section { padding: 64px 20px; }
       .section-heading { font-size: 26px; }
 
-      .intro-offer { padding: 56px 20px; }
-      .intro-offer h2 { font-size: 26px; }
-      .intro-offer .offer-price { font-size: 36px; }
+      .positioning-block { padding: 56px 20px; }
+      .positioning-block h2 { font-size: 28px; }
+      .positioning-block p { font-size: 15px; }
 
       .services-grid { padding: 0 16px; gap: 12px; scroll-snap-type: x mandatory; scroll-padding: 0 16px; }
       .service-card { flex: 0 0 calc(100vw - 32px); height: 60vh; min-height: 420px; scroll-snap-align: center; scroll-snap-stop: always; }
@@ -637,23 +621,12 @@
         <a href="#services" class="btn-hero-secondary" data-track="hero-view-experiences">View Experiences</a>
       </div>
       <div class="hero-micro-links">
-        <a href="#intro-pack" data-track="hero-first-timer">New here? See first&#8209;timer offers</a>
+        <a href="#services" data-track="hero-first-timer">New here? Explore our experiences</a>
         <span class="divider">&middot;</span>
         <a href="https://centralcoastfloat.com.au/gift-vouchers/" data-track="hero-gift">Buying a gift? Get a gift card</a>
       </div>
     </div>
     <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 300+ five-star reviews &middot; Sessions from $59</p>
-  </section>
-
-  <!-- ===== INTRO 3-PACK OFFER ===== -->
-  <section class="intro-offer" id="intro-pack">
-    <span class="offer-badge">Best for first-timers</span>
-    <h2>Not sure where to start? Try the Intro 3&#8209;Pack.</h2>
-    <p class="offer-sub">Three bathhouse sessions to get you hooked. Most people know by the second visit that this is their new reset.</p>
-    <div class="offer-price">$118</div>
-    <p class="offer-price-detail">3 bathhouse visits &middot; Save $29 vs casual</p>
-    <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-primary" data-track="intro-pack-cta">Book Now</a>
-    <p class="offer-fine">Use within 2 months of purchase. Valid for bathhouse sessions only.</p>
   </section>
 
   <!-- ===== SERVICES ===== -->
@@ -739,6 +712,12 @@
         <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
       </button>
     </div>
+  </section>
+
+  <!-- ===== POSITIONING BLOCK ===== -->
+  <section class="positioning-block">
+    <h2>Feel human again.</h2>
+    <p>A natural wellness destination in Umina Beach for stressed locals who need real relief. Bathhouse, float therapy, sauna and massage experiences designed to reset stress, relieve tension and help you feel more like yourself again.</p>
   </section>
 
   <!-- ===== CALM CLUB MEMBERSHIP ===== -->
