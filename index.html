@@ -189,16 +189,30 @@
       font-size: 16px; font-weight: 300; opacity: 0.85; max-width: 540px;
       line-height: 1.75; margin-bottom: 40px;
     }
-    .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .hero-cta-buttons { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: center; }
     .hero-cta-group .btn-hero {
       display: inline-block; background: var(--eucalyptus); color: var(--cloud) !important;
       padding: 16px 36px; border-radius: 6px; font-size: 15px; font-weight: 500;
       letter-spacing: 0.3px; transition: all 0.3s; border: none; cursor: pointer;
     }
     .hero-cta-group .btn-hero:hover { background: #344d42; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(61,90,78,0.3); }
-    .hero-cta-small {
-      font-size: 12px; opacity: 0.6; font-weight: 300; max-width: 320px; line-height: 1.5;
+    .hero-cta-group .btn-hero-secondary {
+      display: inline-block; background: rgba(255,255,255,0.12); backdrop-filter: blur(4px);
+      color: var(--cloud) !important; padding: 16px 36px; border-radius: 6px;
+      font-size: 15px; font-weight: 500; letter-spacing: 0.3px; transition: all 0.3s;
+      border: 1px solid rgba(255,255,255,0.3);
     }
+    .hero-cta-group .btn-hero-secondary:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+    .hero-micro-links {
+      display: flex; gap: 20px; align-items: center; flex-wrap: wrap; justify-content: center;
+    }
+    .hero-micro-links a {
+      font-size: 13px; color: var(--cloud); opacity: 0.7; font-weight: 300;
+      text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s;
+    }
+    .hero-micro-links a:hover { opacity: 1; }
+    .hero-micro-links .divider { opacity: 0.3; font-size: 11px; }
     .hero .micro-proof {
       margin-top: 28px; font-size: 13px; opacity: 0.7; letter-spacing: 0.3px;
     }
@@ -615,13 +629,20 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <p class="hero-eyebrow">Umina Beach, Central Coast</p>
-    <h1>Go from wired and exhausted to deeply calm.</h1>
-    <p class="subtitle">New here? Start with our Bathhouse Reset &mdash; 3 bathhouse visits for $118 (save $59).</p>
+    <h1>Go from wired &amp; exhausted to deeply calm.</h1>
+    <p class="subtitle">Premium bathhouse, float, sauna and massage experiences in Umina Beach.</p>
     <div class="hero-cta-group">
-      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-hero" data-track="hero-cta">Get the Bathhouse Intro 3&#8209;Pack &mdash; $118</a>
-      <p class="hero-cta-small">Prefer floating? Start with our <a href="#" style="color: var(--cloud); text-decoration: underline; opacity: 1;">Float Reset Pack from $179</a>.</p>
+      <div class="hero-cta-buttons">
+        <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-hero" data-track="hero-cta">Book Now</a>
+        <a href="#services" class="btn-hero-secondary" data-track="hero-view-experiences">View Experiences</a>
+      </div>
+      <div class="hero-micro-links">
+        <a href="#intro-pack" data-track="hero-first-timer">New here? See first&#8209;timer offers</a>
+        <span class="divider">&middot;</span>
+        <a href="https://centralcoastfloat.com.au/gift-vouchers/" data-track="hero-gift">Buying a gift? Get a gift card</a>
+      </div>
     </div>
-    <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 &middot; 300+ five-star reviews on Google</p>
+    <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 300+ five-star reviews &middot; Sessions from $59</p>
   </section>
 
   <!-- ===== INTRO 3-PACK OFFER ===== -->
@@ -636,7 +657,7 @@
   </section>
 
   <!-- ===== SERVICES ===== -->
-  <section class="services-section section-linen">
+  <section class="services-section section-linen" id="services">
     <span class="section-eyebrow">What We Offer</span>
     <h2 class="section-heading">Every Way to Reset. One Place That Gets It.</h2>
     <p class="section-sub">Heat, cold, stillness, touch. Every modality we offer is rooted in one principle &mdash; helping your body find its way back to calm.</p>
