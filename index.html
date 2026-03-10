@@ -295,19 +295,64 @@
     }
     .intro-card .btn-intro:hover { background: #2e4a3d; }
 
-    /* ===== POSITIONING BLOCK ===== */
-    .positioning-block {
-      padding: 80px 24px; text-align: center; background: var(--cloud);
-      border-bottom: 1px solid var(--timber-wash);
+    /* ===== FAQ ===== */
+    .faq-section { padding: 80px 24px; }
+    .faq-grid {
+      max-width: 720px; margin: 48px auto 0;
     }
-    .positioning-block h2 {
-      font-family: var(--heading); font-size: 36px; font-weight: 400; font-style: italic;
-      line-height: 1.3; color: var(--eucalyptus); margin: 0 auto 16px;
+    .faq-item {
+      border-bottom: 1px solid var(--timber-wash); overflow: hidden;
     }
-    .positioning-block p {
-      font-size: 16px; color: var(--text-light); max-width: 600px;
-      margin: 0 auto; line-height: 1.8; font-weight: 300;
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; font-family: var(--heading); font-size: 17px;
+      font-weight: 500; color: var(--dark-timber); text-align: left;
+      transition: color 0.2s;
     }
+    .faq-question:hover { color: var(--eucalyptus); }
+    .faq-question .faq-toggle {
+      font-size: 20px; color: var(--text-faint); transition: transform 0.3s;
+      flex-shrink: 0; margin-left: 16px;
+    }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-answer p {
+      font-size: 14px; color: var(--text-light); line-height: 1.75;
+      font-weight: 300; padding: 0 0 20px;
+    }
+
+    /* ===== SOCIAL FEED ===== */
+    .social-feed { padding: 80px 24px; }
+    .feed-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      max-width: 960px; margin: 48px auto 0;
+    }
+    .feed-item {
+      aspect-ratio: 1; border-radius: 10px; overflow: hidden;
+      position: relative; cursor: pointer;
+    }
+    .feed-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .feed-item:hover img { transform: scale(1.06); }
+    .feed-item::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(61,90,78,0); transition: background 0.3s;
+    }
+    .feed-item:hover::after { background: rgba(61,90,78,0.15); }
+    .feed-cta {
+      text-align: center; margin-top: 32px;
+    }
+    .feed-cta a {
+      font-size: 14px; color: var(--eucalyptus); font-weight: 500;
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .feed-cta a:hover { opacity: 0.7; text-decoration: underline; }
 
     /* ===== SERVICES (Native State style) ===== */
     .services-section { padding: 100px 0 80px; }
@@ -412,43 +457,6 @@
     }
     .services-dot:hover { background: var(--cedar); }
 
-    /* ===== CALM CLUB ===== */
-    .calm-club {
-      padding: 80px 24px; text-align: center;
-      background: var(--eucalyptus); color: var(--cloud);
-    }
-    .calm-club .club-eyebrow {
-      font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
-      opacity: 0.5; margin-bottom: 14px;
-    }
-    .calm-club h2 {
-      font-family: var(--heading); font-size: 32px; font-weight: 400; font-style: italic;
-      line-height: 1.35; max-width: 620px; margin: 0 auto 12px;
-    }
-    .calm-club .club-sub {
-      font-size: 15px; opacity: 0.8; max-width: 480px; margin: 0 auto 36px;
-      line-height: 1.75; font-weight: 300;
-    }
-    .calm-club-features {
-      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-      margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;
-    }
-    .club-feature {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 14px; font-weight: 400; opacity: 0.9;
-    }
-    .club-feature .check {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center;
-      font-size: 12px; flex-shrink: 0;
-    }
-    .calm-club .btn-club {
-      display: inline-block; background: var(--cloud); color: var(--eucalyptus) !important;
-      padding: 14px 34px; border-radius: 6px; font-size: 14px; font-weight: 500;
-      letter-spacing: 0.3px; transition: all 0.3s;
-    }
-    .calm-club .btn-club:hover { background: var(--linen); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
-
     /* ===== SOCIAL PROOF ===== */
     .social-proof { padding: 80px 24px; text-align: center; }
     .google-badge {
@@ -475,26 +483,6 @@
     .testimonial-card .t-name { font-size: 13px; font-weight: 500; color: var(--dark-timber); }
     .testimonial-card .t-source { font-size: 11px; color: var(--text-faint); margin-top: 2px; }
 
-    /* ===== WHY US ===== */
-    .why-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-      max-width: 820px; margin: 56px auto 0;
-    }
-    .why-item {
-      background: var(--cloud); border-radius: 12px; padding: 32px 28px;
-      border: 1px solid var(--timber-wash);
-    }
-    .why-item .why-icon {
-      width: 44px; height: 44px; border-radius: 10px; background: var(--linen);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; margin-bottom: 16px; color: var(--eucalyptus);
-    }
-    .why-item h4 {
-      font-family: var(--heading); font-size: 17px; font-weight: 500;
-      color: var(--dark-timber); margin-bottom: 8px;
-    }
-    .why-item p { font-size: 13px; color: var(--text-light); line-height: 1.7; font-weight: 300; }
-
     /* ===== OUR STORY ===== */
     .story-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
@@ -517,19 +505,6 @@
       font-family: var(--heading); font-style: italic; font-size: 18px;
       color: var(--cedar); margin-top: 24px; margin-bottom: 0;
     }
-
-    /* ===== HOW IT WORKS ===== */
-    .steps-row {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
-      max-width: 780px; margin: 56px auto 0;
-    }
-    .step-item { text-align: center; }
-    .step-item .step-number {
-      font-family: var(--heading); font-size: 44px; font-style: italic;
-      color: var(--bamboo); margin-bottom: 10px;
-    }
-    .step-item h4 { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--dark-timber); }
-    .step-item p { font-size: 13px; color: var(--text-light); line-height: 1.65; font-weight: 300; }
 
     /* ===== FINAL CTA ===== */
     .final-cta {
@@ -606,21 +581,14 @@
       .intro-card .intro-card-value { font-size: 10px; margin-bottom: 10px; }
       .intro-card .btn-intro { padding: 7px 18px; font-size: 11.5px; }
 
-      .positioning-block { padding: 56px 20px; }
-      .positioning-block h2 { font-size: 28px; }
-      .positioning-block p { font-size: 15px; }
-
       .services-grid { padding: 0 16px; gap: 12px; scroll-snap-type: x mandatory; scroll-padding: 0 16px; }
       .service-card { flex: 0 0 calc(100vw - 32px); height: 60vh; min-height: 420px; scroll-snap-align: center; scroll-snap-stop: always; }
 
       .testimonials { grid-template-columns: 1fr; max-width: 400px; }
-      .why-grid { grid-template-columns: 1fr; max-width: 400px; }
       .story-grid { grid-template-columns: 1fr; gap: 32px; }
-      .steps-row { grid-template-columns: 1fr; gap: 32px; max-width: 340px; }
 
-      .calm-club { padding: 56px 20px; }
-      .calm-club h2 { font-size: 26px; }
-      .calm-club-features { gap: 20px; flex-direction: column; align-items: center; }
+      .faq-question { font-size: 15px; }
+      .feed-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 
       .final-cta { padding: 80px 20px; }
       .final-cta h2 { font-size: 28px; }
@@ -680,7 +648,7 @@
   <section class="hero">
     <p class="hero-eyebrow">Umina Beach, Central Coast</p>
     <h1>Go from wired &amp; exhausted to deeply calm.</h1>
-    <p class="subtitle">Premium bathhouse, float, sauna and massage experiences in Umina Beach.</p>
+    <p class="subtitle">Heat, cold, stillness and hands-on relief &mdash; all under one roof in Umina Beach.</p>
     <div class="hero-cta-group">
       <div class="hero-cta-buttons">
         <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-hero" data-track="hero-cta">Book Now</a>
@@ -692,7 +660,7 @@
         <a href="https://centralcoastfloat.com.au/gift-vouchers/" data-track="hero-gift">Buying a gift? Get a gift card</a>
       </div>
     </div>
-    <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 300+ five-star reviews &middot; Sessions from $59</p>
+    <p class="micro-proof"><span class="stars-inline">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 300+ five-star reviews &middot; Bathhouse from $59</p>
   </section>
 
   <!-- ===== SERVICES ===== -->
@@ -780,12 +748,6 @@
     </div>
   </section>
 
-  <!-- ===== POSITIONING BLOCK ===== -->
-  <section class="positioning-block">
-    <h2>Feel human again.</h2>
-    <p>A natural wellness destination in Umina Beach for stressed locals who need real relief. Bathhouse, float therapy, sauna and massage experiences designed to reset stress, relieve tension and help you feel more like yourself again.</p>
-  </section>
-
   <!-- ===== FIRST-TIMER OFFERS ===== -->
   <section class="first-timer" id="first-timer">
     <span class="section-eyebrow">New Here?</span>
@@ -827,30 +789,8 @@
     </div>
   </section>
 
-  <!-- ===== CALM CLUB MEMBERSHIP ===== -->
-  <section class="calm-club">
-    <p class="club-eyebrow">Membership</p>
-    <h2>Come more than once a month? Calm Club beats paying casual every time.</h2>
-    <p class="club-sub">4 bathhouse visits every 4 weeks for $179 + member&#8209;only perks.</p>
-    <div class="calm-club-features">
-      <div class="club-feature">
-        <span class="check">&#10003;</span>
-        4 bathhouse visits every 4 weeks
-      </div>
-      <div class="club-feature">
-        <span class="check">&#10003;</span>
-        Member pricing on floats, infrared &amp; cold plunge
-      </div>
-      <div class="club-feature">
-        <span class="check">&#10003;</span>
-        Loyalty bonuses after 3 and 6 months
-      </div>
-    </div>
-    <a href="#" class="btn-club" data-track="calm-club-cta">See Calm Club Memberships</a>
-  </section>
-
   <!-- ===== SOCIAL PROOF ===== -->
-  <section class="social-proof section-linen">
+  <section class="social-proof section-cloud">
     <div class="google-badge">
       <div class="g-icon"><span>G</span></div>
       <div>
@@ -867,51 +807,21 @@
     <div class="testimonials">
       <div class="testimonial-card">
         <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"So glad we found this beautiful oasis right in the middle of Umina. We went for a birthday treat &mdash; bathhouse for both of us and then a massage. Who knew what delights lay behind that front door!"</p>
+        <p>&ldquo;So glad we found this beautiful oasis right in the middle of Umina. We went for a birthday treat &mdash; bathhouse for both of us and then a massage. Who knew what delights lay behind that front door!&rdquo;</p>
         <div class="t-name">Kate T.</div>
         <div class="t-source">Google Review</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Visited straight after completing a Spartan marathon and it was exactly what my body needed to recover. The atmosphere is beautiful, calming, and thoughtfully designed."</p>
+        <p>&ldquo;Visited straight after completing a Spartan marathon and it was exactly what my body needed to recover. The atmosphere is beautiful, calming, and thoughtfully designed.&rdquo;</p>
         <div class="t-name">tjrivera88</div>
         <div class="t-source">Google Review</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"From the moment I stepped in the front door I felt welcomed. The surroundings are relaxing and the staff are wonderful. Had the Rejuvenation Detox Experience and left feeling amazing."</p>
+        <p>&ldquo;From the moment I stepped in the front door I felt welcomed. The surroundings are relaxing and the staff are wonderful. Had the Rejuvenation Detox Experience and left feeling amazing.&rdquo;</p>
         <div class="t-name">Mary-ann M.</div>
         <div class="t-source">Google Review</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHY US ===== -->
-  <section class="section section-cloud">
-    <span class="section-eyebrow">Why Central Coast Float</span>
-    <h2 class="section-heading">Built on Results, Not Hype</h2>
-    <p class="section-sub">We&rsquo;ve been doing this for nearly a decade. Our reputation isn&rsquo;t built on marketing &mdash; it&rsquo;s built on people who keep coming back.</p>
-
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-icon">&#9900;</div>
-        <h4>9 Years of Experience</h4>
-        <p>What started as a backyard float cabin has grown into the Central Coast&rsquo;s most trusted natural wellness destination. We&rsquo;ve refined every detail.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">&#9733;</div>
-        <h4>300+ Five-Star Reviews</h4>
-        <p>Our reputation is built on outcomes. People come back because it works &mdash; and they tell their friends because the experience speaks for itself.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">&#9672;</div>
-        <h4>Natural &amp; Science-Backed</h4>
-        <p>Heat, cold, water, touch, stillness. Every modality is grounded in evidence. No pharmaceutical shortcuts &mdash; just honest, natural wellness that works.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">&#10003;</div>
-        <h4>Everything Provided</h4>
-        <p>Towels, lockers, showers, filtered water, herbal tea. Just bring your swimwear and show up. We&rsquo;ve thought of everything so you don&rsquo;t have to.</p>
       </div>
     </div>
   </section>
@@ -930,32 +840,58 @@
     </div>
   </section>
 
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="section section-cloud">
-    <span class="section-eyebrow">Getting Started</span>
-    <h2 class="section-heading">Three Steps. Zero Friction.</h2>
-    <p class="section-sub">Never been before? We make it easy.</p>
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section section-cloud" id="faq">
+    <span class="section-eyebrow">Common Questions</span>
+    <h2 class="section-heading">Everything you need to know.</h2>
 
-    <div class="steps-row">
-      <div class="step-item">
-        <div class="step-number">01</div>
-        <h4>Book Online</h4>
-        <p>Pick your service, day, and time. We&rsquo;re open Wednesday to Sunday. Takes about 30 seconds.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-question">What do I need to bring? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Just yourself and your swimwear. We provide towels, lockers, showers, filtered water and herbal tea. Everything is set up so you can just show up and switch off.</p></div>
       </div>
-      <div class="step-item">
-        <div class="step-number">02</div>
-        <h4>Show Up &amp; Switch Off</h4>
-        <p>We provide everything &mdash; lockers, towels, showers, herbal tea. Just bring yourself and your swimwear.</p>
+      <div class="faq-item">
+        <button class="faq-question">How long is a session? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Bathhouse sessions are 2 hours. Float sessions are 60 or 90 minutes. Infrared sauna sessions are 45 minutes. Massage appointments range from 30 to 90 minutes depending on the treatment.</p></div>
       </div>
-      <div class="step-item">
-        <div class="step-number">03</div>
-        <h4>Reset</h4>
-        <p>Whether you float, sauna, or get a massage &mdash; leave feeling lighter, calmer, and more like yourself.</p>
+      <div class="faq-item">
+        <button class="faq-question">Can I come with a friend or partner? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Absolutely. The bathhouse fits groups and couples. Infrared sauna &amp; cold plunge rooms are private. Float pods are individual but you can book side-by-side sessions. Massage can be booked as couples too.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do I need to book in advance? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Yes &mdash; all sessions are by appointment only. You can book online in about 30 seconds. Weekends tend to fill up fast so we recommend booking a few days ahead.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is it hygienic? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>Extremely. Float pods use 600kg of Epsom salt (naturally antimicrobial) with UV and filtration between every session. All pools, spas and saunas are cleaned and maintained to the highest standards.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What are your opening hours? <span class="faq-toggle">+</span></button>
+        <div class="faq-answer"><p>We&rsquo;re open Wednesday &amp; Thursday 10am&ndash;7pm, Friday 10am&ndash;10pm, Saturday &amp; Sunday 10am&ndash;5pm. Closed Monday &amp; Tuesday.</p></div>
       </div>
     </div>
+  </section>
 
-    <div class="cta-wrap">
-      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-primary" data-track="how-it-works-cta">Book Now</a>
+  <!-- ===== SOCIAL FEED ===== -->
+  <section class="social-feed section-linen">
+    <span class="section-eyebrow">@centralcoastfloat</span>
+    <h2 class="section-heading">See what it looks like.</h2>
+    <p class="section-sub">Real moments from our space. No filters needed.</p>
+
+    <div class="feed-grid">
+      <div class="feed-item"><img src="images/service-bathhouse.jpg" alt="Cedar bathhouse at Central Coast Float"></div>
+      <div class="feed-item"><img src="images/service-float.jpg" alt="Float therapy pod"></div>
+      <div class="feed-item"><img src="images/service-infrared.jpg" alt="Private infrared sauna"></div>
+      <div class="feed-item"><img src="images/service-massage.jpg" alt="Massage therapy"></div>
+      <div class="feed-item"><img src="images/relaxation-room.jpg" alt="Relaxation room"></div>
+      <div class="feed-item"><img src="images/service-cold-plunge.jpg" alt="Cold plunge pool"></div>
+      <div class="feed-item"><img src="images/service-bathhouse.jpg" alt="Bathhouse garden setting"></div>
+      <div class="feed-item"><img src="images/service-float.jpg" alt="Float pod interior"></div>
+    </div>
+
+    <div class="feed-cta">
+      <a href="https://www.instagram.com/centralcoastfloat/" target="_blank" rel="noopener">Follow us on Instagram &rarr;</a>
     </div>
   </section>
 
@@ -1140,6 +1076,18 @@
         });
       });
     })();
+  </script>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
   </script>
 
 </body>
