@@ -451,6 +451,26 @@
     }
     .services-dot:hover { background: var(--cedar); }
 
+    /* Scroll hint — mobile only */
+    .services-scroll-hint {
+      display: none;
+      text-align: center; margin-top: 18px;
+      font-family: var(--body); font-size: 12px; color: var(--text-light);
+      letter-spacing: 0.04em; opacity: 0.6;
+    }
+    .services-scroll-hint span {
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .services-scroll-hint svg {
+      width: 14px; height: 14px; stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      animation: nudge 1.8s ease-in-out infinite;
+    }
+    @keyframes nudge {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
     /* ===== SOCIAL PROOF ===== */
     .social-proof { padding: 80px 24px; text-align: center; }
     .google-badge {
@@ -576,14 +596,15 @@
       .intro-card .btn-intro { padding: 7px 18px; font-size: 11.5px; }
 
       .services-grid {
-        flex-direction: column; padding: 0 16px; gap: 14px;
-        overflow-x: visible; scroll-snap-type: none;
+        padding: 0 16px; gap: 12px;
+        scroll-snap-type: x mandatory; scroll-padding: 0 16px;
       }
       .service-card {
-        flex: none; width: 100%; height: 44vh; min-height: 320px;
-        scroll-snap-align: none; scroll-snap-stop: normal; border-radius: 10px;
+        flex: 0 0 82vw; height: 60vh; min-height: 420px;
+        scroll-snap-align: center; scroll-snap-stop: always;
       }
       .services-nav { display: none; }
+      .services-scroll-hint { display: block; }
 
       .testimonials { grid-template-columns: 1fr; max-width: 400px; }
       .story-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -746,6 +767,8 @@
         <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
       </button>
     </div>
+
+    <p class="services-scroll-hint"><span>Scroll to see all experiences <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg></span></p>
   </section>
 
   <!-- ===== FIRST-TIMER OFFERS ===== -->
@@ -1050,6 +1073,18 @@
 
       buildDots();
       updateControls();
+
+      /* Hide scroll hint after first scroll */
+      var hint = document.querySelector('.services-scroll-hint');
+      if (hint) {
+        grid.addEventListener('scroll', function() {
+          if (grid.scrollLeft > 30) {
+            hint.style.opacity = '0';
+            hint.style.transition = 'opacity 0.4s';
+            setTimeout(function() { hint.style.display = 'none'; }, 400);
+          }
+        }, { passive: true });
+      }
     })();
 
     // CTA tracking
