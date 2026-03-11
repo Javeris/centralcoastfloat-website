@@ -424,6 +424,16 @@
       color: var(--cloud) !important; border: 1px solid rgba(255,255,255,0.35);
     }
     .card-btn-explore:hover { background: rgba(255,255,255,0.28); transform: translateY(-1px); }
+    .card-gift-link {
+      display: block;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 10px;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+      transition: color 0.2s ease;
+    }
+    .card-gift-link:hover { color: #fff; }
 
     /* Services navigation controls */
     .services-nav {
@@ -469,6 +479,67 @@
     @keyframes nudge {
       0%, 100% { transform: translateX(0); }
       50% { transform: translateX(4px); }
+    }
+
+    /* ===== GIFT THE RESET ===== */
+    .gift-reset {
+      padding: 72px 24px;
+      text-align: center;
+      background: var(--cloud);
+    }
+    .gift-reset-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .gift-reset .section-heading {
+      margin-bottom: 10px;
+    }
+    .gift-reset .gift-lead {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+    .gift-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+      text-align: left;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gift-perks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--text);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .gift-perks li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--eucalyptus);
+    }
+    .btn-gift {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--eucalyptus);
+      color: var(--cloud) !important;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      transition: all 0.3s ease;
+    }
+    .btn-gift:hover {
+      background: #344d42;
+      transform: translateY(-1px);
     }
 
     /* ===== SOCIAL PROOF ===== */
@@ -607,6 +678,10 @@
       .services-nav { gap: 0; margin-top: 20px; }
       .services-scroll-hint { display: block; }
 
+      .gift-reset { padding: 48px 20px; }
+      .gift-reset .gift-lead { font-size: 15px; }
+      .gift-perks li { font-size: 13.5px; }
+
       .testimonials { grid-template-columns: 1fr; max-width: 400px; }
       .story-grid { grid-template-columns: 1fr; gap: 32px; }
 
@@ -701,6 +776,7 @@
             <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-bathhouse">Book Now</a>
             <a href="finnish-sauna-bathhouse-v2.html" class="card-btn-explore" data-track="card-explore-bathhouse">Explore</a>
           </div>
+          <a href="https://centralcoastfloat.com.au/gift-vouchers/" class="card-gift-link" data-track="card-gift-bathhouse">Or gift this experience &rarr;</a>
         </div>
       </div>
       <div class="service-card">
@@ -714,6 +790,7 @@
             <a href="https://centralcoastfloat.floathelm.com/booking" class="card-btn-book" data-track="card-book-float">Book Now</a>
             <a href="#" class="card-btn-explore" data-track="card-explore-float">Explore</a>
           </div>
+          <a href="https://centralcoastfloat.com.au/gift-vouchers/" class="card-gift-link" data-track="card-gift-float">Or gift this experience &rarr;</a>
         </div>
       </div>
       <div class="service-card">
@@ -808,6 +885,29 @@
         <p class="intro-card-value">3 sessions &middot; Buy 2 get 1 free</p>
         <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-intro" data-track="intro-plunge">Book Intro</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== GIFT THE RESET ===== -->
+  <section class="gift-reset">
+    <div class="gift-reset-inner">
+      <h2 class="section-heading">Gift the reset.</h2>
+      <p class="gift-lead">Give someone three deeply relaxing escapes instead of more stuff.</p>
+      <ul class="gift-perks">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 7 12 14 2 7"/></svg>
+          Instant digital voucher by email
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Valid for bathhouse, floats, sauna &amp; massage
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          3&#8209;year expiry &mdash; so they can use it when life calms down
+        </li>
+      </ul>
+      <a href="https://centralcoastfloat.com.au/gift-vouchers/" class="btn-gift" data-track="gift-section-cta">Buy a Gift Voucher</a>
     </div>
   </section>
 
