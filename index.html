@@ -611,16 +611,9 @@
 
     /* ===== FINAL CTA ===== */
     .final-cta {
-      background: linear-gradient(160deg, rgba(43,36,32,0.7) 0%, rgba(30,58,79,0.65) 50%, rgba(61,90,78,0.6) 100%), url('images/service-infrared.jpg');
-      background-size: cover; background-position: center;
+      background: var(--eucalyptus);
       padding: 120px 24px; text-align: center; color: var(--cloud);
-      position: relative;
     }
-    .final-cta::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 60%);
-    }
-    .final-cta > * { position: relative; z-index: 1; }
     .final-cta h2 {
       font-family: var(--heading); font-size: 40px; font-style: italic; font-weight: 400;
       margin-bottom: 16px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.3;
