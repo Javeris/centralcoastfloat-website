@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#3D5A4E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Head -->
+  <circle cx="14" cy="26" r="5"/>
+  <!-- Body floating flat -->
+  <path d="M19 27 C28 27 38 27 52 27"/>
+  <!-- Gentle water ripples -->
+  <path d="M6 34 C10 31 14 31 18 34 C22 37 26 37 30 34 C34 31 38 31 42 34 C46 37 50 37 54 34 C58 31 60 31 62 34"/>
+  <path d="M8 42 C12 39 16 39 20 42 C24 45 28 45 32 42 C36 39 40 39 44 42 C48 45 52 45 56 42" opacity="0.5"/>
+</svg>
