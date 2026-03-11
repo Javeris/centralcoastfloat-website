@@ -556,13 +556,8 @@
 
     /* ===== ATMOSPHERE BANNER ===== */
     .atmosphere-banner {
-      width: 100%; height: 50vh; min-height: 320px;
-      overflow: hidden; position: relative;
-    }
-    .atmosphere-banner img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 40%;
-      display: block;
+      width: 100%; height: 400px;
+      background: url('images/Atmosphere_2.JPG') center / cover no-repeat fixed;
     }
 
     /* ===== SOCIAL PROOF ===== */
@@ -715,6 +710,7 @@
       .testimonials { grid-template-columns: 1fr; max-width: 400px; }
       .story-grid { grid-template-columns: 1fr; gap: 32px; }
 
+      .atmosphere-banner { height: 220px; background-attachment: scroll; }
       .faq-question { font-size: 15px; }
       .gallery-strip img { height: 36vh; min-height: 240px; }
 
@@ -983,9 +979,7 @@
   </section>
 
   <!-- ===== ATMOSPHERE BANNER ===== -->
-  <div class="atmosphere-banner">
-    <img src="images/Atmosphere_2.JPG" alt="The atmosphere at Central Coast Float" draggable="false">
-  </div>
+  <div class="atmosphere-banner" role="img" aria-label="The atmosphere at Central Coast Float"></div>
 
   <!-- ===== OUR STORY ===== -->
   <section class="section section-linen">
