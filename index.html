@@ -612,15 +612,24 @@
     /* ===== FINAL CTA ===== */
     .final-cta {
       background: var(--eucalyptus);
-      padding: 120px 24px; text-align: center; color: var(--cloud);
+      padding: 88px 24px; text-align: center; color: var(--cloud);
     }
     .final-cta h2 {
       font-family: var(--heading); font-size: 40px; font-style: italic; font-weight: 400;
-      margin-bottom: 16px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.3;
+      margin-bottom: 12px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.3;
     }
-    .final-cta p { font-size: 15px; opacity: 0.85; max-width: 480px; margin: 0 auto 40px; line-height: 1.75; font-weight: 300; }
-    .final-cta .micro { font-size: 12px; opacity: 0.55; margin-top: 16px; font-weight: 300; }
-    .final-cta .urgency-note { font-size: 13px; color: var(--bamboo); font-weight: 500; margin-top: 14px; }
+    .final-cta p { font-size: 15px; opacity: 0.85; max-width: 480px; margin: 0 auto 28px; line-height: 1.75; font-weight: 300; }
+    .final-cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .final-cta .btn-outline-light { margin: 0; }
+    .btn-ghost-light {
+      display: inline-block; padding: 14px 32px; border-radius: 6px;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.4px;
+      background: rgba(255,255,255,0.12); color: var(--cloud) !important;
+      border: 1px solid rgba(255,255,255,0.35); transition: all 0.3s ease;
+    }
+    .btn-ghost-light:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+    .final-cta .urgency-note { font-size: 13px; color: var(--bamboo); font-weight: 500; margin-top: 20px; }
+    .final-cta .micro { font-size: 12px; opacity: 0.55; margin-top: 8px; font-weight: 300; }
 
     /* ===== FOOTER ===== */
     .site-footer {
@@ -1040,10 +1049,13 @@
   <!-- ===== FINAL CTA ===== -->
   <section class="final-cta">
     <h2>You Don&rsquo;t Need to Earn Rest</h2>
-    <p>Book a session, show up, and let your body do what it already knows how to do. Your nervous system will thank you.</p>
-    <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-outline-light" data-track="final-cta">Book Now</a>
-    <p class="urgency-note">Weekends book out fast &middot; Bookings by appointment only</p>
-    <p class="micro">From $59 per session &middot; Open Wed&ndash;Sun &middot; Umina Beach</p>
+    <p>Book your session, show up, and let your body do the rest.</p>
+    <div class="final-cta-buttons">
+      <a href="https://centralcoastfloat.floathelm.com/booking" class="btn-outline-light" data-track="final-cta">Book Now</a>
+      <a href="https://centralcoastfloat.com.au/gift-vouchers/" class="btn-ghost-light" data-track="final-gift">Buy a Gift Card</a>
+    </div>
+    <p class="urgency-note">Weekends book out fast &middot; Book ahead to secure your preferred time</p>
+    <p class="micro">From $59 &middot; Open Wed&ndash;Sun &middot; Umina Beach</p>
   </section>
 
   <!-- ===== FOOTER ===== -->
