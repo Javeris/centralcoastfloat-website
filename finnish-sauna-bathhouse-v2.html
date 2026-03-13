@@ -291,15 +291,6 @@
     .pricing-row { display: grid; gap: 20px; }
     .pricing-row-2 { grid-template-columns: 1fr 1fr; }
 
-    /* Featured full-width card */
-    .pricing-featured-row { max-width: 100%; }
-    .pricing-featured-row .price-card {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;
-    }
-    .pricing-featured-row .price-card .card-content { }
-    .pricing-featured-row .price-card .card-side {
-      display: flex; flex-direction: column; justify-content: center;
-    }
 
     .price-card {
       background: var(--cloud); border-radius: 14px; padding: 32px 28px;
@@ -327,10 +318,6 @@
     .price-card .card-cta .btn-primary,
     .price-card .card-cta .btn-outline-dark { width: 100%; text-align: center; display: block; font-size: 13px; padding: 12px 20px; }
 
-    /* Quiet secondary cards */
-    .price-card.quiet { opacity: 0.9; }
-    .price-card.quiet h4 { font-size: 16px; }
-    .price-card.quiet .price-desc { font-size: 13px; }
 
     /* ===== HOW IT WORKS ===== */
     .steps-row {
@@ -434,7 +421,6 @@
       .walkthrough-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
       .steps-row { grid-template-columns: 1fr; gap: 32px; max-width: 340px; }
       .pricing-row-2 { grid-template-columns: 1fr; }
-      .pricing-featured-row .price-card { grid-template-columns: 1fr; }
 
       .final-cta { padding: 80px 20px; }
       .final-cta h2 { font-size: 28px; }
@@ -620,34 +606,22 @@
         </div>
       </div>
 
-      <!-- Row 2: Calm Club — full-width featured -->
-      <div class="pricing-featured-row">
+      <!-- Row 2: Coming regularly — Calm Club (featured) + Packs side by side -->
+      <div class="pricing-row pricing-row-2">
         <div class="price-card featured">
           <span class="badge">Best Value</span>
-          <div class="card-content">
-            <h4>Calm Club Bathhouse Membership</h4>
-            <div class="price">$179</div>
-            <div class="price-note">every 4 weeks &middot; <span class="savings">$45 per visit</span></div>
-            <p class="price-desc" style="margin-bottom:0;">Your weekly reset, locked in. Best if you know you'll be here at least once a month. Cancel anytime &mdash; no lock-in contract.</p>
-          </div>
-          <div class="card-side">
-            <ul class="feature-list" style="margin-bottom:16px;">
-              <li><span class="icon">&#10003;</span> 4 bathhouse visits every 4 weeks</li>
-              <li><span class="icon">&#10003;</span> Member pricing on floats, infrared &amp; cold plunge</li>
-              <li><span class="icon">&#10003;</span> Cancel anytime &mdash; no lock-in contract</li>
-            </ul>
-            <div class="card-cta">
-              <a href="https://centralcoastfloat.com.au/Calm_Club/" class="btn-primary" data-track="calmclub-cta">See Calm Club Membership</a>
-            </div>
+          <h4>Calm Club Membership</h4>
+          <div class="price">$179</div>
+          <div class="price-note">every 4 weeks &middot; <span class="savings">$45 per visit</span></div>
+          <p class="price-desc">Your weekly reset, locked in. 4 bathhouse visits every 4 weeks, plus member pricing on floats, infrared &amp; cold plunge. Cancel anytime.</p>
+          <div class="card-cta">
+            <a href="https://centralcoastfloat.com.au/Calm_Club/" class="btn-primary" data-track="calmclub-cta">See Calm Club Membership</a>
           </div>
         </div>
-      </div>
 
-      <!-- Row 3: Packs + Gift side by side (quiet) -->
-      <div class="pricing-row pricing-row-2">
-        <div class="price-card quiet">
+        <div class="price-card">
           <h4>Bathhouse Packs</h4>
-          <p class="price-desc" style="margin-top:4px;">Come occasionally without a membership. No lock-in, no expiry pressure.</p>
+          <p class="price-desc">Come regularly without a membership. No lock-in, no expiry pressure.</p>
           <ul class="feature-list">
             <li><span class="icon">&#10003;</span> <strong>4-Pack:</strong> $199 ($50 each)</li>
             <li><span class="icon">&#10003;</span> <strong>8-Pack:</strong> $379 ($47 each)</li>
@@ -657,10 +631,13 @@
             <a href="https://centralcoastfloat.floathelm.com/store/packages/1239112" class="btn-outline-dark" style="flex:1;" data-track="8pack-cta">Get the 8-Pack</a>
           </div>
         </div>
+      </div>
 
-        <div class="price-card quiet">
+      <!-- Row 3: Gift -->
+      <div class="pricing-row pricing-row-2">
+        <div class="price-card">
           <h4>Gift a Bathhouse Escape</h4>
-          <p class="price-desc" style="margin-top:4px;">Instant digital voucher &mdash; perfect for birthdays, Mother's Day, thank-yous, or anyone who needs permission to slow down.</p>
+          <p class="price-desc" style="margin-top:4px;">Instant digital voucher &mdash; perfect for birthdays, Mother's Day, thank-yous, or anyone who needs permission to slow down. They choose their own date and time.</p>
           <div class="card-cta">
             <a href="https://centralcoastfloat.com.au/gift-vouchers/" class="btn-outline-dark" data-track="gift-cta">Buy a Gift Voucher</a>
           </div>
