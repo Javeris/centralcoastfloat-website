@@ -317,6 +317,7 @@
     .price-card .card-cta { margin-top: auto; }
     .price-card .card-cta .btn-primary,
     .price-card .card-cta .btn-outline-dark { width: 100%; text-align: center; display: block; font-size: 13px; padding: 12px 20px; }
+    .gift-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 
 
     /* ===== HOW IT WORKS ===== */
@@ -421,6 +422,7 @@
       .walkthrough-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
       .steps-row { grid-template-columns: 1fr; gap: 32px; max-width: 340px; }
       .pricing-row-2 { grid-template-columns: 1fr; }
+      .gift-card { flex-direction: column; align-items: stretch; }
 
       .final-cta { padding: 80px 20px; }
       .final-cta h2 { font-size: 28px; }
@@ -634,7 +636,7 @@
       </div>
 
       <!-- Row 3: Gift — full width -->
-      <div class="price-card" style="display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <div class="price-card gift-card">
         <div>
           <h4>Gift a Bathhouse Escape</h4>
           <p class="price-desc" style="margin-bottom:0;">Instant digital voucher &mdash; perfect for birthdays, Mother's Day, thank-yous, or anyone who needs permission to slow down. They choose their own date and time.</p>
